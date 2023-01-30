@@ -1,0 +1,115 @@
+<br>
+
+<div class="container div1" >
+  <br>
+  <h1 style="text-align: center; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;color: brown;">Employee Form</h1>
+    <form class="row g-3" #employeeForm="ngForm" (ngSubmit)="onSubmit(employeeForm)" >
+      <!-- <div class="col-md-4">
+        <label for="validationDefault01" class="form-label" ></label>
+        
+      </div> -->
+        <div class="col-md-4">
+          <input type="hidden" class="form-control" name="_id" #_id="ngModel" [(ngModel)]=" employeeService.selectedEmployee._id"  required >
+          <label for="firstname" class="form-label">First name</label>
+          <input type="text" class="form-control" autocomplete="off" #name="ngModel" [(ngModel)]=" employeeService.selectedEmployee.firstname" placeholder="Mark" name="firstname" id="firstname"  required>
+        </div>
+        <div class="col-md-4">
+          <label for="lastname" class="form-label">Last name</label>
+          <input type="text" class="form-control" autocomplete="off" #name="ngModel" [(ngModel)]=" employeeService.selectedEmployee.lastname"  placeholder="Otto"  name="lastname" id="lastname" required>
+        </div>
+        <div class="col-md-4">
+          <label for="empid" class="form-label">Employee ID</label>
+          <div class="input-group">
+            <span class="input-group-text" id="inputGroupPrepend2">emp</span>
+            <input type="text" class="form-control" #name="ngModel" [(ngModel)]=" employeeService.selectedEmployee.empid" autocomplete="off"   aria-describedby="inputGroupPrepend2"  name="empid" id="empid" required>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <label for="country" class="form-label">Country</label>
+          <input type="text" class="form-control"  autocomplete="off"   name="country" value="India" id="country" readonly required>
+        </div>
+        <div class="col-md-4">
+          <label for="state" class="form-label">State</label>
+          <select class="form-select"  name="state" id="state" required #name="ngModel" [(ngModel)]=" employeeService.selectedEmployee.state">
+            <option selected disabled value="">Choose...</option>
+            <option>Andhra Pradesh</option>
+            <option>Punjab</option>
+            <option>Assam</option>
+            <option>Bihar</option>
+            <option>Maharashtra</option>
+            <option>GOA</option>
+            <option>karnataka</option>
+            <option>Uttarakhanda</option>
+            <option>Uttar Pradesh</option>
+            <option>Tamilnadu</option>
+            <option>Arunachal Pradesh</option>
+            <option>Madhya Pradesh</option>
+            <option>West Bengal</option>
+            <option>kerala</option>
+            <option>odisha</option>
+            <option>Gujarat</option>
+            <option>Himachal Pradesh</option>
+            <option>Tripura</option>
+            <option>Manipur</option>
+            <option>Maharashtra</option>
+            <option>Chhattisgarh</option>
+            <option>Rajasthan</option>
+            <option>Sikkim</option>
+            <option>Mizoram</option>
+            <option>Haryana</option>
+            <option>Jharkhand</option>
+            <option>Nagaland</option>
+            <option>Meghalaya</option>
+            <option>Telangana</option>
+            <option>J&K</option>
+          </select>
+        </div>
+        <div class="col-md-4">
+          <label for="city" class="form-label">City</label>
+          <input type="text" class="form-control" #name="ngModel" [(ngModel)]=" employeeService.selectedEmployee.city" autocomplete="off"  name="city" id="city" required>
+        </div>
+        <div class="col-md-4">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" class="form-control" #name="ngModel" [(ngModel)]=" employeeService.selectedEmployee.email" autocomplete="off"   name="email" id="email" required>
+        </div>
+
+        <div class="col-md-4">
+          <label for="contact" class="form-label">Contact</label>
+          <input type="text" class="form-control" #name="ngModel" [(ngModel)]=" employeeService.selectedEmployee.contact" autocomplete="off"  name="contact" id="contact" required>
+        </div>
+
+        <div class="col-md-4">
+          <label for="dob" class="form-label">DOB</label>
+          <input type="date" class="form-control" #name="ngModel" [(ngModel)]=" employeeService.selectedEmployee.dob" autocomplete="off"   name="dob" id="dob" required>
+        </div>
+
+        <div class="col-md-4">
+          <label for="designation" class="form-label">Designation</label>
+          <input type="text" class="form-control" #name="ngModel" [(ngModel)]=" employeeService.selectedEmployee.designation" autocomplete="off"   name="designation" id="designation" required>
+        </div>
+
+        <div class="col-md-4">
+          <label for="jndate" class="form-label">Joinig Date</label>
+          <input type="date" class="form-control"  #name="ngModel" [(ngModel)]=" employeeService.selectedEmployee.jndate" autocomplete="off"   name="jndate" required> 
+        </div>
+
+        <div class="col-md-4">
+          <label for="salary" class="form-label">Salary</label>
+          <input type="text" class="form-control" #name="ngModel" [(ngModel)]=" employeeService.selectedEmployee.salary" autocomplete="off"  required name="salary" id="salary">
+        </div>
+        <div class="col-12">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value=""  required>
+            <label class="form-check-label" for="invalidCheck2">
+              Agree to terms and conditions
+            </label>
+          </div>
+        </div>
+        <div class="col-12">
+          <button class="btn btn-success mx-2" type="submit">Submit form</button>
+
+          <button class="btn btn-dark" type="button" (click)="resetForm(employeeForm)">Reset form</button>
+        </div>
+      </form>
+      <br>
+    </div>
